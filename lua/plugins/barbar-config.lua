@@ -1,6 +1,7 @@
 require('bufferline').setup({
   auto_hide = true,
   closable = false,
+  animation = false,
 })
 
 local map = vim.api.nvim_set_keymap
