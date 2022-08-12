@@ -2,20 +2,14 @@ local alpha = require('alpha')
 local dashboard = require('alpha.themes.dashboard')
 
 vim.cmd([[
-  hi StartLogo1                  guifg=#14067E ctermfg=18   gui=NONE cterm=NONE
-  hi StartLogo2                  guifg=#15127B ctermfg=18   gui=NONE cterm=NONE
-  hi StartLogo3                  guifg=#171F78 ctermfg=18   gui=NONE cterm=NONE
-  hi StartLogo4                  guifg=#182B75 ctermfg=18   gui=NONE cterm=NONE
-  hi StartLogo5                  guifg=#193872 ctermfg=23   gui=NONE cterm=NONE
-  hi StartLogo6                  guifg=#1A446E ctermfg=23   gui=NONE cterm=NONE
-  hi StartLogo7                  guifg=#1C506B ctermfg=23   gui=NONE cterm=NONE
-  hi StartLogo8                  guifg=#1D5D68 ctermfg=23   gui=NONE cterm=NONE
-  hi StartLogo9                  guifg=#1E6965 ctermfg=23   gui=NONE cterm=NONE
-  hi StartLogo10                 guifg=#1F7562 ctermfg=29   gui=NONE cterm=NONE
-  hi StartLogo11                 guifg=#21825F ctermfg=29   gui=NONE cterm=NONE
-  hi StartLogo12                 guifg=#228E5C ctermfg=29   gui=NONE cterm=NONE
-  hi StartLogo13                 guifg=#239B59 ctermfg=29   gui=NONE cterm=NONE
-  hi StartLogo14                 guifg=#24A755 ctermfg=35   gui=NONE cterm=NONE
+  hi StartLogo1 guifg=#143F6B 
+  hi StartLogo2 guifg=#344268 
+  hi StartLogo3 guifg=#544564 
+  hi StartLogo4 guifg=#744861 
+  hi StartLogo5 guifg=#954A5D 
+  hi StartLogo6 guifg=#B54D5A 
+  hi StartLogo7 guifg=#D55056 
+  hi StartLogo8 guifg=#F55353 
 ]])
 
 -- Set header
@@ -31,14 +25,14 @@ local header = {
 }
 
 -- Colorize header
-local function colorize_header(delta)
+local function colorize_header()
   local lines = {}
   for i, chars in pairs(header) do
     local line = {
       type = "text",
       val = chars,
       opts = {
-        hl = "StartLogo" .. i + delta,
+        hl = "StartLogo" .. i,
         shrink_margin = false,
         position = "center",
       }
@@ -71,7 +65,7 @@ local buttons = {
 local config = {
     layout = {
         { type = "padding", val = 2 },
-        colorize_header(5),
+        colorize_header(),
         { type = "padding", val = 2 },
         { type = "padding", val = 2 },
         { type = "group", val = buttons, opts = {position = "center"} }
