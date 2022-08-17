@@ -58,6 +58,7 @@ local buttons = {
   dashboard.button("f", "  Find file", ":Telescope find_files <CR>"),
   dashboard.button("g", "  Git", ":Git <CR> | :wincmd j | :q<CR>"),
   dashboard.button("s", "  Settings" , ":cd ~/.config/nvim | :e init.lua <CR>"),
+  dashboard.button("u", "痢 Update", ":PackerSync<CR>"),
   dashboard.button("q", "  Quit NVIM", ":qa<CR>"),
 }
 
