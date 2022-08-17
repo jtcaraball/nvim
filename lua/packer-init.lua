@@ -3,7 +3,12 @@ require('packer').startup(function(use)
   -- Highlighting
   use 'nvim-treesitter/nvim-treesitter'
   -- Tyiping
-  use 'tpope/vim-surround'
+  use {
+    'kylechui/nvim-surround',
+    config = function()
+      require('nvim-surround').setup({})
+    end
+  }
   use 'tpope/vim-commentary'
   -- Fzf
   use 'nvim-lua/plenary.nvim'
