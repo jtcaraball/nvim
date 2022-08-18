@@ -16,13 +16,14 @@ vim.o.smartcase = true
 vim.o.incsearch = true
 
 -- Tabs
+vim.o.tabstop = 2
 vim.o.autoindent = true
-vim.o.expandtab = true
 vim.o.softtabstop = 2
 vim.o.shiftwidth = 2
+-- vim.o.expandtab = true
 vim.cmd([[
-  autocmd FileType python setlocal softtabstop=4 shiftwidth=4
-  autocmd FileType c setlocal softtabstop=4 shiftwidth=4
+  autocmd FileType python setlocal expandtab softtabstop=4 shiftwidth=4
+  autocmd FileType ts setlocal expandtab softtabstop=2 shiftwidth=2
 ]])
 
 -- Colors
@@ -66,4 +67,5 @@ vim.cmd([[
   autocm BufWritePre *.vue call TrimWhiteSpaces()
   autocm BufWritePre *.c call TrimWhiteSpaces()
   autocm BufWritePre *.ts call TrimWhiteSpaces()
+  autocm BufWritePre *.go call TrimWhiteSpaces()
 ]])
