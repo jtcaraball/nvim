@@ -22,7 +22,15 @@ local on_attach = function(client, bufnr)
   vim.keymap.set('n', 'gr', vim.lsp.buf.references, bufopts)
 end
 -- Enable lenguage servers
-local servers = {'clangd', 'pyright', 'tsserver', 'texlab', 'vuels', 'gopls'}
+local servers = {
+	'clangd',
+	'pyright',
+	'tsserver',
+	'texlab',
+	'vuels',
+	'gopls',
+	'marksman'
+}
 for _, lsp in ipairs(servers) do
   lspconfig[lsp].setup(require('coq').lsp_ensure_capabilities({
     on_attach = on_attach,
