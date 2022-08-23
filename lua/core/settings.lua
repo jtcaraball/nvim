@@ -60,7 +60,7 @@ vim.cmd([[
 -- Trim white spaces
 vim.cmd([[
   function TrimWhiteSpaces()
-    %s/\s*$//
+    %s/[ \t]*$//
     ''
   endfunction
   autocm BufWritePre *.py call TrimWhiteSpaces()
@@ -68,4 +68,5 @@ vim.cmd([[
   autocm BufWritePre *.c call TrimWhiteSpaces()
   autocm BufWritePre *.ts call TrimWhiteSpaces()
   autocm BufWritePre *.go call TrimWhiteSpaces()
+  autocm BufWritePre *.lua call TrimWhiteSpaces()
 ]])
