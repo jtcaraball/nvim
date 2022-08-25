@@ -28,7 +28,7 @@ require('packer').startup(function(use)
   use 'neovim/nvim-lspconfig'
   -- File managing
   use 'kyazdani42/nvim-web-devicons' -- optional, for file icons
-  use 'kyazdani42/nvim-tree.lua' 
+  use 'kyazdani42/nvim-tree.lua'
   -- Linting
   use 'nvie/vim-flake8'
   -- Org
@@ -47,4 +47,6 @@ require('packer').startup(function(use)
   }
   -- Greeter
   use 'goolord/alpha-nvim'
+	-- Terminal integration
+	use { "akinsho/toggleterm.nvim", tag = 'v2.*' }
 end)
