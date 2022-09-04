@@ -9,6 +9,7 @@ require('packer').startup(function(use)
       require('nvim-surround').setup({})
     end
   }
+	use 'unblevable/quick-scope'
   use 'tpope/vim-commentary'
   -- Fzf
   use 'nvim-lua/plenary.nvim'
