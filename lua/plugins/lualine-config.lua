@@ -3,6 +3,7 @@ require('lualine').setup {
     icons_enabled = true,
     -- theme = 'modus-vivendi',
     theme = 'catppuccin',
+		globalstatus = true,
     component_separators = { left = '\\', right = '/'},
     -- component_separators = { left = '', right = ''},
     -- section_separators = { left = '', right = ''},
@@ -11,7 +12,6 @@ require('lualine').setup {
     section_separators = { left = '', right = ''},
     disabled_filetypes = {'NvimTree'},
     always_divide_middle = true,
-    globalstatus = false,
   },
   sections = {
     lualine_a = {'mode'},

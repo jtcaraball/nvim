@@ -6,7 +6,7 @@ vim.g.catppuccin_flavour = 'mocha'
 
 require('catppuccin').setup({
   term_colors = true,
-  transparent_background = true,
+  -- transparent_background = true,
   integrations = {
     nvimtree = {
       transparent_panel = true
