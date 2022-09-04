@@ -24,6 +24,7 @@ vim.o.shiftwidth = 2
 vim.cmd([[
   autocmd FileType python setlocal expandtab softtabstop=4 shiftwidth=4
   autocmd FileType ts setlocal expandtab softtabstop=2 shiftwidth=2
+  autocmd FileType vue setlocal expandtab softtabstop=2 shiftwidth=2
 ]])
 
 -- Colors
