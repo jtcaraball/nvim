@@ -3,7 +3,7 @@ local telescope = require('telescope')
 -- Show dot files
 telescope.setup({
   defaults = {
-    file_ignore_patterns = { '.git' }
+    file_ignore_patterns = { '.git', 'node_modules' }
   },
   pickers = {
     find_files = { hidden = true }
