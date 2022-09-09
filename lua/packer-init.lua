@@ -27,13 +27,14 @@ require('packer').startup(function(use)
   -- LSP
   use 'williamboman/nvim-lsp-installer'
   use 'neovim/nvim-lspconfig'
-  -- File managing
+  -- File navigation
   use 'kyazdani42/nvim-web-devicons' -- optional, for file icons
   use 'kyazdani42/nvim-tree.lua'
+	use 'ThePrimeagen/harpoon'
   -- Linting
   use 'nvie/vim-flake8'
   -- Org
-  use 'nvim-neorg/neorg'
+  use {'nvim-neorg/neorg', tag='0.0.12'}
   -- Theme
   -- use 'navarasu/onedark.nvim'
   use {
@@ -41,11 +42,6 @@ require('packer').startup(function(use)
     as = 'catppuccin',
   }
   use 'nvim-lualine/lualine.nvim'
-  -- Tabs
-  use {
-    'romgrk/barbar.nvim',
-    requires = {'kyazdani42/nvim-web-devicons'}
-  }
   -- Greeter
   use 'goolord/alpha-nvim'
 	-- Terminal integration
