@@ -11,6 +11,7 @@ require('packer').startup(function(use)
   }
 	use 'unblevable/quick-scope'
   use 'tpope/vim-commentary'
+	use 'AndrewRadev/splitjoin.vim'
   -- Fzf
   use 'nvim-lua/plenary.nvim'
   use 'nvim-telescope/telescope.nvim'
