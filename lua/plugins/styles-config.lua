@@ -1,12 +1,13 @@
 -- Catpuccin
 local colors = require("catppuccin.palettes").get_palette()
 colors.none = "NONE"
-vim.g.catppuccin_flavour = 'mocha'
+-- vim.g.catppuccin_flavour = 'mocha'
 -- local ll_color = '#3E4452'
 
 require('catppuccin').setup({
   term_colors = true,
   -- transparent_background = true,
+	flavour = 'mocha',
   integrations = {
     nvimtree = {
       transparent_panel = true
