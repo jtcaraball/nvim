@@ -1,4 +1,4 @@
--- LSP Installer
+-- -- LSP Installer
 require('nvim-lsp-installer').setup({
   automatic_installation = false,
   ui = {
@@ -30,4 +30,3 @@ require('nvim-lsp-installer').setup({
     },
   },
 })
-

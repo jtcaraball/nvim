@@ -11,7 +11,7 @@ require('packer').startup(function(use)
   }
 	use 'unblevable/quick-scope'
   use 'tpope/vim-commentary'
-	use 'AndrewRadev/splitjoin.vim'
+	use 'Wansmer/treesj'
   -- Fzf
   use 'nvim-lua/plenary.nvim'
   use 'nvim-telescope/telescope.nvim'
@@ -26,7 +26,26 @@ require('packer').startup(function(use)
     branch = 'artifacts'
   }
   -- LSP
-  use 'williamboman/nvim-lsp-installer'
+	use {
+		'williamboman/mason.nvim',
+		config = function()
+			require("mason").setup({
+				ui = {
+					icons = {
+						package_installed = "✓",
+						package_pending = "➜",
+						package_uninstalled = "✗"
+					}
+				}
+			})
+		end
+	}
+	use {
+		'williamboman/mason-lspconfig.nvim',
+		config = function()
+			require("mason-lspconfig").setup()
+		end
+	}
   use 'neovim/nvim-lspconfig'
   -- File navigation
   use 'kyazdani42/nvim-web-devicons' -- optional, for file icons
@@ -35,7 +54,7 @@ require('packer').startup(function(use)
   -- Linting
   use 'nvie/vim-flake8'
   -- Org
-  use {'nvim-neorg/neorg', tag='0.0.12'}
+  use {'nvim-neorg/neorg'}
   -- Theme
   -- use 'navarasu/onedark.nvim'
   use {

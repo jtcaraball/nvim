@@ -23,13 +23,9 @@ local on_attach = function(client, bufnr)
 end
 -- Enable lenguage servers
 local servers = {
-	'clangd',
 	'pyright',
-	'tsserver',
-	'texlab',
-	'vuels',
-	'gopls',
-	'marksman'
+	'volar',
+	'tsserver'
 }
 for _, lsp in ipairs(servers) do
   lspconfig[lsp].setup(require('coq').lsp_ensure_capabilities({
