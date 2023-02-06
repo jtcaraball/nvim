@@ -4,20 +4,24 @@ require('lualine').setup {
     -- theme = 'modus-vivendi',
     theme = 'catppuccin',
 		globalstatus = true,
-    component_separators = { left = '\\', right = '/'},
+    component_separators = {left = '🭦🭀', right = '/'},
     -- component_separators = { left = '', right = ''},
     -- section_separators = { left = '', right = ''},
     -- component_separators = { left = '', right = ''},
     -- section_separators = { left = '', right = ''},
-    section_separators = { left = '', right = ''},
+    -- section_separators = {left = '', right = ''},
+    section_separators = {left = '🭀', right = '🭋'},
     disabled_filetypes = {'NvimTree'},
     always_divide_middle = true,
   },
   sections = {
     lualine_a = {'mode'},
-    lualine_b = {'branch', 'filename'},
+    lualine_b = {
+			'branch',
+			{'filename', file_status = false, path = 1}
+		},
     lualine_c = {'diagnostics'},
-    lualine_x = {},
+    lualine_x = {'diff'},
     lualine_y = {'filetype'},
     lualine_z = {'location'}
   },
