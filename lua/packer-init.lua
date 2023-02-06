@@ -50,7 +50,7 @@ require('packer').startup(function(use)
   -- File navigation
   use 'kyazdani42/nvim-web-devicons' -- optional, for file icons
   use 'kyazdani42/nvim-tree.lua'
-	use 'ThePrimeagen/harpoon'
+	-- use 'ThePrimeagen/harpoon'
   -- Linting
   use 'nvie/vim-flake8'
   -- Org
