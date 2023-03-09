@@ -19,44 +19,37 @@ require('packer').startup(function(use)
   use 'tpope/vim-fugitive'
   -- Latex uses
   use 'lervag/vimtex'
-  -- Autocomplition
-  use 'ms-jpq/coq_nvim'
-  use {
-    'ms-jpq/coq.artifacts',
-    branch = 'artifacts'
-  }
   -- LSP
 	use {
-		'williamboman/mason.nvim',
-		config = function()
-			require("mason").setup({
-				ui = {
-					icons = {
-						package_installed = "✓",
-						package_pending = "➜",
-						package_uninstalled = "✗"
-					}
-				}
-			})
-		end
+		'VonHeikemen/lsp-zero.nvim',
+		branch = 'v1.x',
+		requires = {
+			-- LSP Support
+			{'neovim/nvim-lspconfig'},             -- Required
+			{'williamboman/mason.nvim'},           -- Optional
+			{'williamboman/mason-lspconfig.nvim'}, -- Optional
+
+			-- Autocompletion
+			{'hrsh7th/nvim-cmp'},         -- Required
+			{'hrsh7th/cmp-nvim-lsp'},     -- Required
+			{'hrsh7th/cmp-buffer'},       -- Optional
+			{'hrsh7th/cmp-path'},         -- Optional
+			{'saadparwaiz1/cmp_luasnip'}, -- Optional
+			{'hrsh7th/cmp-nvim-lua'},     -- Optional
+
+			-- Snippets
+			{'L3MON4D3/LuaSnip'},             -- Required
+			{'rafamadriz/friendly-snippets'}, -- Optional
+		}
 	}
-	use {
-		'williamboman/mason-lspconfig.nvim',
-		config = function()
-			require("mason-lspconfig").setup()
-		end
-	}
-  use 'neovim/nvim-lspconfig'
   -- File navigation
   use 'kyazdani42/nvim-web-devicons' -- optional, for file icons
   use 'kyazdani42/nvim-tree.lua'
-	-- use 'ThePrimeagen/harpoon'
   -- Linting
   use 'nvie/vim-flake8'
   -- Org
   use {'nvim-neorg/neorg'}
   -- Theme
-  -- use 'navarasu/onedark.nvim'
   use {
     'catppuccin/nvim',
     as = 'catppuccin',
