@@ -5,7 +5,6 @@ require('packer-init')
 -- Plugins
 require('plugins/treesitter-config')
 require('plugins/telescope-config')
--- require('plugins/lsp-installer-config')
 require('plugins/lsp-config')
 require('plugins/nvimtree-config')
 require('plugins/neorg-config')
