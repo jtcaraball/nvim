@@ -1,17 +1,17 @@
 vim.cmd([[
-  noremap <Up> <Nop>
-  noremap <Down> <Nop>
-  noremap <Left> <Nop>
-  noremap <Right> <Nop>
-  noremap <silent> <leader>/ :nohlsearch<CR>
+	noremap <Up> <Nop>
+	noremap <Down> <Nop>
+	noremap <Left> <Nop>
+	noremap <Right> <Nop>
+	noremap <silent> <leader>/ :nohlsearch<CR>
 ]])
 
 function map(mode, shrct, cmd)
-  vim.api.nvim_set_keymap(mode, shrct, cmd, { noremap = true, silent = true})
+	vim.api.nvim_set_keymap(mode, shrct, cmd, { noremap = true, silent = true})
 end
 
 function nmap(shrct, cmd)
-  map('n', shrct, cmd)
+	map('n', shrct, cmd)
 end
 
 -- Window navegation
