@@ -16,13 +16,14 @@ vim.o.smartcase = true
 vim.o.incsearch = true
 
 -- Tabs
-vim.o.tabstop = 2
+vim.o.tabstop = 4
 vim.o.autoindent = true
-vim.o.softtabstop = 2
-vim.o.shiftwidth = 2
+vim.o.softtabstop = 4
+vim.o.shiftwidth = 4
 -- vim.o.expandtab = true
 vim.cmd([[
   autocmd FileType python setlocal expandtab softtabstop=4 shiftwidth=4
+  autocmd FileType javascript setlocal expandtab softtabstop=2 shiftwidth=2
   autocmd FileType typescript setlocal expandtab softtabstop=2 shiftwidth=2
   autocmd FileType typescriptreact setlocal expandtab softtabstop=2 shiftwidth=2
   autocmd FileType vue setlocal expandtab softtabstop=2 shiftwidth=2
