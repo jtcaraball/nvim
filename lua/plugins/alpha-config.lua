@@ -57,6 +57,7 @@ end
 -- dashboard.section.buttons.val = {
 local buttons = {
   dashboard.button("e", "  New file" , ":ene <BAR> startinsert <CR>"),
+  dashboard.button("t", "  Browse" , ":e .<CR>"),
   dashboard.button("f", "  Find file", ":Telescope find_files <CR>"),
   dashboard.button("l", "  Live grep", ":Telescope live_grep <CR>"),
   dashboard.button("g", "  Git", ":Git <CR> | :wincmd j | :q<CR>"),
