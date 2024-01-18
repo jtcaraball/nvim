@@ -1,8 +1,6 @@
 local alpha = require('alpha')
 local dashboard = require('alpha.themes.dashboard')
 
-nmap('<leader>a', ':Alpha <CR>')
-
 vim.cmd([[
 	hi StartLogo1 guifg=#143F6B
 	hi StartLogo2 guifg=#344268

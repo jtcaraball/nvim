@@ -19,5 +19,3 @@ tsj.setup({
 	-- Notify about possible problems or not
 	notify = true,
 })
-
-nmap('<leader>s', ':TSJToggle<CR>')
