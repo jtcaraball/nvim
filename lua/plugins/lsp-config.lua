@@ -6,9 +6,7 @@ local lsp = require('lsp-zero').preset({
 })
 
 lsp.ensure_installed({
-	'pyright',
-	'volar',
-	'tsserver'
+	'gopls',
 })
 
 -- Fix Undefined global 'vim'
