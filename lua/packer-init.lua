@@ -47,6 +47,7 @@ require('packer').startup(function(use)
 	use 'kyazdani42/nvim-tree.lua'
 	-- Linting
 	use 'nvie/vim-flake8'
+	use 'mfussenegger/nvim-lint'
 	-- Org
 	-- Theme
 	use {
