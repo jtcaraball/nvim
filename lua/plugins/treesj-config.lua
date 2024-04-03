@@ -19,3 +19,7 @@ tsj.setup({
 	-- Notify about possible problems or not
 	notify = true,
 })
+
+vim.cmd([[
+	nnoremap <leader>s :TSJToggle<CR>
+]])
