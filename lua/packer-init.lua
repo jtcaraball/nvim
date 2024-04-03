@@ -48,7 +48,8 @@ require('packer').startup(function(use)
 	-- Linting
 	use 'nvie/vim-flake8'
 	use 'mfussenegger/nvim-lint'
-	-- Org
+	-- Formating
+	use 'stevearc/conform.nvim'
 	-- Theme
 	use {
 		'catppuccin/nvim',
