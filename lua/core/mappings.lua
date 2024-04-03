@@ -21,13 +21,3 @@ nmap('<leader>k', ':wincmd k<CR>')
 nmap('<leader>l', ':wincmd l<CR>')
 nmap('<leader>vs', ':vs<CR>')
 nmap('<leader>hs', ':split<CR>')
-
--- :vim searching
-nmap('<leader>cn', ':cnext<CR>')
-nmap('<leader>cp', ':cprevious<CR>')
-
--- Marks
-nmap(',', '`') -- Easy jumping for internation keyboard layout
-
--- treejs
-nmap('<leader>s', ':TSJToggle<CR>')
