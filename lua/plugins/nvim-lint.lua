@@ -12,14 +12,14 @@ local golangcilint = lint.linters.golangcilint
 golangcilint.args = {
 	'run',
 	-- My params: start
-	'-E',
+	'--enable',
 	'gofumpt',
 	'gosec',
 	-- My params: end
     '--out-format',
     'json',
     function()
-      return vim.fn.fnamemodify(vim.api.nvim_buf_get_name(0), ":h")
+		return vim.fn.fnamemodify(vim.api.nvim_buf_get_name(0), ":h")
     end
 }
 
